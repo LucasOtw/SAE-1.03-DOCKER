@@ -1,0 +1,51 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+header {
+    position : fixed;
+    background: black;
+    display : flex;
+    width : 100%;
+    top : 0;
+    left : 0;
+    padding : 2em;
+    text-align: center;
+    margin-right: 100em;
+    justify-content :left;
+}
+nav{
+    margin-left: 30em;
+}
+
+main {
+    margin-top : 7em;
+}
+
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+nav a:hover,
+nav a.active {
+    color: rgb(0, 68, 255);
+}
+
+h1 {
+   font-style: italic;
+}
+
+h4 {
+    border : 1px solid grey;
+    background-color: grey;
+    border-radius : 10px;
+    padding : 1em;
+}
+
+footer {
+    text-align: center;
+}
