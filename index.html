@@ -9,12 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
 </head>
 <body>
+
     <header>
         <nav>
+
             <a href="#home">Home</a>
-            <a href="#about">Les membres</a>
-            <a href="#services">A propos</a>
-            <a href="#contact">Contact</a>
+            <a href="#Client">Client</a>
+            <a href="#Version">Versions</a>
+            <a href="#Date">Dates</a>
         </nav>
     </header>
     <hr>
@@ -28,53 +30,56 @@
         <hr>
         <section>
             <h2>Variables globales</h2>
-            <p>int annee;    'Année pour laquelle le calendrier est généré'</p>
+            <p> - int annee;    'Année pour laquelle le calendrier est généré'</p>
         </section>
         <hr>
         <section>
-            <h2>Les différentes fonctions/procédures</h2>
+            <h2>Les différentes fonctions</h2>
             <article>
-                <h4>int jourDeLaSemaine(int jour, int mois, int annee)</h4>
+                <code>int jourDeLaSemaine(int jour, int mois, int annee)</code>
 
                 <p>Calcule l'indice du jour de la semaine pour une date donnée<br>
                    Utilise l'algorithme de Zeller pour déterminer l'indice du jour de la semaine<br>
-                   param int jour Jour de la date<br>
-                   param int mois Mois de la date<br>
-                   param int annee Année de la date<br>
-                   return int Indice du jour de la semaine (0 pour dimanche, 1 pour lundi, etc.)
+                   - param int jour Jour de la date<br>
+                   - param int mois Mois de la date<br>
+                   - param int annee Année de la date<br>
+                   - return int Indice du jour de la semaine (0 pour dimanche, 1 pour lundi, etc.)
                 </p>
             </article>
 
             <article>
-                <h4>char* getNomDuMois(int numeroMois)</h4>
+                <code>char* getNomDuMois(int numeroMois)</code>
 
                 <p>Renvoie le nom du mois pour un numéro de mois donné<br>
-                    int numeroMois Numéro du mois (0 pour janvier, 1 pour février, etc.)br
-                    char* Nom du mois
+                    - int numeroMois Numéro du mois (0 pour janvier, 1 pour février, etc.)br
+                    - char* Nom du mois
                    
                 </p>
             </article>
 
             <article>
-                <h4>int nombreDeJours(int numeroMois, int annee)</h4>
+                <code>int nombreDeJours(int numeroMois, int annee)</code>
                 <p>
                     Renvoie le nombre de jours dans un mois pour une année donnée<br>
-                    int numeroMois Numéro du mois (0 pour janvier, 1 pour février, etc.)<br>
-                    int annee Année<br>
-                    int Nombre de jours dans le mois
+                    - int numeroMois Numéro du mois (0 pour janvier, 1 pour février, etc.)<br>
+                    - int annee Année<br>
+                    - int Nombre de jours dans le mois
                 </p>
             </article>
 
             <article>
-                <h4>void imprimerCalendrier(int annee)</h4>
+                <code>void imprimerCalendrier(int annee)</code>
                 <p>
-                    Imprime le calendrier pour une année donnée<br>
-                    int annee Année pour laquelle le calendrier est généré
+                    - Imprime le calendrier pour une année donnée<br>
+                    - int annee Année pour laquelle le calendrier est généré
                 </p>
             </article>
+            <h2>
+                Le programme principal
+            </h2>
 
             <article>
-                <h4>int main()</h4>
+                <h4><strong>int main()</strong></h4>
                 <p>
                     Fonction principale<br>
                     int Code de retour
