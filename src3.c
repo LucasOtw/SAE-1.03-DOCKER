@@ -15,9 +15,9 @@
 #include <stdbool.h>
 #include <string.h>
 
-/**D
+/**
  * \def N
- * \brief Taille du coté d'un block
+ * \detail Taille du coté d'un block
  * 
  * Changera la taillle de la grille mais n'affecte pas un bloc qui, lui, fera toujours du 3/3
 */
@@ -25,7 +25,7 @@
 
 /**
  * \def TAILLE
- * \brief Taille de la grille complète
+ * \detail Taille de la grille complète
  * 
  * Il dimensionne tout ce qui touche à la taille de la grille globale et de al taille du tableau
 */
@@ -33,13 +33,13 @@
 
 /**
  * \def RIEN
- * \brief Chiffre a afficher en absence de charactère
+ * \detail Chiffre a afficher en absence de charactère
 */
 #define RIEN '.'
 
 /**
  * \def CASE_FICHIER_VIDE
- * \brief Charactère en cas d'abscende d'entrée
+ * \detail Charactère en cas d'abscende d'entrée
  * 
  * Quel charactère dans le fichier marque l'absence de valeur
 */
@@ -47,7 +47,7 @@
 
 /**
  * \def CASE_GRILLE_VIDE
- * \brief Charactère en cas d'abscende d'entrée
+ * \detail Charactère en cas d'abscende d'entrée
  * 
  * Quel charactère dans la grille marque l'absence de valeur
 */
@@ -56,11 +56,18 @@
 
 /**
 * \typedef tGrille
-* \brief Tableau a deux dimensions de la taille de la grille de sudoku
+* \detail Tableau a deux dimensions de la taille de la grille de sudoku
 *
 *  Tableau a deux dimensions qui permet de stocker une grille de sudoku permettant une manipulation plus simple.
 */
 typedef int tGrille[TAILLE][TAILLE];
+/**
+* \typedef jOLI
+* \detail tableau qui contiens le mot "Joli"
+*
+*  typoe différent du premier contenant des lettres pour eppeller le mot joli car je n'ai plus d'inspi...
+*/
+typedef char jOli[4];
 
 
 void chargerGrille(tGrille grille);
@@ -72,7 +79,7 @@ bool grillePleine(tGrille grille);
 void ligneTiret(int colonne);
 
 /**
- * \brief Grille imposée
+ * \detail Grille imposée
  * 
  * Permet de vérifier les charactèrs par rapport a la grille imposée a tout moment dans l'éxécution du programme
 */
@@ -80,13 +87,26 @@ tGrille grilleImposee;//variable globale pour une question d'acces
 
 /**
 * \fn int main()
-* \brief Programme principal.
+* \detail Programme principal.
 * \return Code de sortie du programme (0 : sortie normale).
 * 
 * Le programme principal met en oeuvre les différentes fonctions et proédures afin de permettre de joue rune partie
 * de sudoku
 */
 int main(){
+    jOli joli;
+    joli[0] = 'j';
+    joli[1] = 'o';
+    joli[2] = 'l';
+    joli[3] = 'i';
+
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%c",joli[i]);
+    }
+    printf("\n");
+    
+
     tGrille grille1;
     int numLigne,numColonne,valeur;
     chargerGrille(grille1);
@@ -119,7 +139,7 @@ int main(){
 
 /**
 * \fn void chargerGrille(tGrille g)
-* \brief Initialise les grilles passées en paramètre
+* \detail Initialise les grilles passées en paramètre
 * \param g : Paramètre d'entrée/sortie qui représente la grille a remplir
 * 
 * Cette procédure initialise la grille passée en paramètre ainsi qu'une grille appellée "grilleImpose"
@@ -163,7 +183,7 @@ void chargerGrille(tGrille g){
 *************************/
 /**
 * \fn void afficherGrille(tGrille aAfficher,int ligne,int colonne,int erreur)
-* \brief Se charge de l'affichage de la grille
+* \detail Se charge de l'affichage de la grille
 * \param aAfficher : Paramètre d'entrée correspondant à la grille à afficher
 * \param ligne : Paramètre d'entrée correspondant à la ligne séléctionnée par l'utilisateur( doit etre -1 si pas de ligne séléctionnée)
 * \param colonne : Paramètre d'entrée correspondant à la colonne séléctionnée par l'utilisateur( doit etre -1 si pas de colonne séléctionnée)
@@ -270,7 +290,7 @@ void afficherGrille(tGrille aAfficher,int ligne,int colonne,int erreur){
 
 /**
  * \fn void ligneTiret(int colonne)
- * \brief affiche une ligne de tiret
+ * \detail affiche une ligne de tiret
  * \param colonne :Paramètre d'entrée qui correspond a une colonne séléctionnée
  * \see void afficherGrille(tGrille aAfficher,int ligne,int colonne,int erreur)
  * 
@@ -305,7 +325,7 @@ void ligneTiret(int colonne){
 
 /**
  * \fn void saisir(int *chiffre)
- * \brief Permet de saisir une veleur
+ * \detail Permet de saisir une veleur
  * \param chiffre : Paramètre d'entrée/sortie utilisé principalement en sortie. C'est le chiffre saisi
  * 
  * Permet la saisie d'un chiffre après vérification que le chiffre est valide ( entre 1 et 9 et entier).
@@ -329,7 +349,7 @@ void saisir(int *chiffre){
 
 /**
  * \fn bool possible(tGrille grille,int ligne,int colonne,int recherche)
- * \brief Vérifie si on peut placer une chiffre
+ * \detail Vérifie si on peut placer une chiffre
  * \param grille : Paramètre d'entrée dans laquelle on recherche la valeur
  * \param ligne : Paramètre d'entrée de la ligne de la valeur que l'on vérifie
  * \param colonne : Paramètre d'entrée de la colonne de la valeur que l'on vérifie
@@ -442,7 +462,7 @@ bool possible(tGrille grille,int ligne,int colonne,int recherche){
 
 /**
  * \fn bool quietPossible(tGrille grillePre, int ligne, int colonne, int recherche, int ligneIntrus, int colonneIntrus, int valeurIntrus)
- * \brief Vérifie si on peut placer une chiffre.
+ * \detail Vérifie si on peut placer une chiffre.
  *
  * \param grillePre Paramètre d'entrée dans laquelle on recherche la valeur.
  * \param ligne Paramètre d'entrée de la ligne de la valeur que l'on vérifie.
@@ -552,7 +572,7 @@ bool quietPossible(tGrille grillePre, int ligne, int colonne, int recherche, int
 
 /**
  * \fn bool grillePleine(tGrille grille)
- * \brief Vérifie si la grille est pleine
+ * \detail Vérifie si la grille est pleine
  * \param grille :Grille à vérifier
  * \return true si la grille est pleine et false si elle est vide
  * 

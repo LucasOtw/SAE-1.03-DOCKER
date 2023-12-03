@@ -21,6 +21,15 @@ enum {     /** structure des opérations*/
    NO = 20,
 };
 
+rendjoli {     /** structure d'opérations*/
+   ADD = 1,    /** addition mais différent*/
+   SUBTRACT,  /** soustraction désolé mais il n'y a pas besoin*/
+   MULTIPLY,  /** multiplication enfin, si, pour rentrer dans les consignes*/
+   DIVIDE,   /** Division plustot self-explanatory*/
+   YES = 10,
+   NO = 20,
+};
+
 void affichage();
 
                         /*****************************************************
