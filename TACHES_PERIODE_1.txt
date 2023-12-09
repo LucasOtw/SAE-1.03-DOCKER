@@ -1,10 +1,11 @@
-LISTE DES TACHES EFFECTUEES LORS DE LA PREMIERE PERIODE (SEMAINE 1 & 2)
+LISTE DES TACHES EFFECTUEES LORS DE LA PREMIERE PERIODE
 
 0.1 - Prise de connaissance et lecture du sujet.
 0.2 - Répartition des tâches et création du tableau Trello, du groupe Discord et du dépot GitHub.
 1 - Mise en place des commentaires sur 3 fichiers .c .
 2 - Création du modèle de documentation technique au format HTML.
-3 - Création du modèle de documentation utilisateur au format Markdown.
+3 - Création du modèle de documentation utilisateur au format HTML.
+4 - Création du modèle de documentation utilisateur au format Markdown.
 END - Création de ce fichier , la liste des tâches réalisées en semaines 1 et 2 ainsi que la répartition du travail individuel.
 
 
@@ -14,21 +15,25 @@ Répartition du travail individuel :
 	- 1 : 100%
 	- 2 : 0%
 	- 3 : 0%
+	- 4 : 0%
 	- END : 0%
 
 - Lucas :
 	- 1 : 35%
 	- 2 : 65%
 	- 3 : 0%
+	- 4 : 0%
 	- END : 0%
 
 - Guénolé :
 	- 1 : 20%
-	- 2 : 80%
-	- 3 : 0%
+	- 2 : 60%
+	- 3 : 20%
+	- 4 : 0%
 	- END : 0%
 - Tom :
 	- 1 : 0%
 	- 2 : 0%
+	- 3 : 0%
 	- 4 : 80%
 	- END : 20%
