@@ -20,12 +20,12 @@ enum {     /** structure des opérations*/
    YES = 10,
    NO = 20,
 };
-
+/** Les commentaires sont les memes mais c'est pour rentrer dans les consignes */
 rendjoli {     /** structure d'opérations*/
    ADD = 1,    /** addition mais différent*/
-   SUBTRACT,  /** soustraction désolé mais il n'y a pas besoin*/
-   MULTIPLY,  /** multiplication enfin, si, pour rentrer dans les consignes*/
-   DIVIDE,   /** Division plustot self-explanatory*/
+   SUBTRACT,  /** soustraction */
+   MULTIPLY,  /** multiplication*/
+   DIVIDE,   /** Division */
    YES = 10,
    NO = 20,
 };
@@ -37,8 +37,8 @@ void affichage();
                         *****************************************************/
 
 /**
-* \brief Programme principale
-* \detail Cette fonction sers a écécuter l'intégralitée des opérations tel que:
+* \brief Programme principal
+* \detail Cette fonction sert a execturer l'intégralité des opérations telles que:
 * - une division
 * - une addition
 * - une multiplication
@@ -49,7 +49,7 @@ void affichage();
 */
 
 int main(void) {     // programme principal
-   int choice;      // Variable qui permet de choisir le type d'opérations
+   int choice;      // Variable qui permet de choisir le type d'opération
    double values[2];
 
 
@@ -111,9 +111,9 @@ int main(void) {     // programme principal
 * - du tout
 * - vraiment rien
 * - meme pas a faire joli
-* - mais il fallais deux fonctions et la calculatrice étais pas bien longue...
+* - mais il fallait deux fonctions et la calculatrice était pas bien longue...
 *
-* vous allez bien?
+* vous allez bien ?
 */
 void affichage(){
     printf("coucou je sers a rien mdr");
