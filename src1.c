@@ -189,7 +189,7 @@ void imprimerCalendrier(int annee)
 
 /**
 * \brief Fonction principale
-* \detail se sert de toute les procédures et fonctions précédentes
+* \detail se sert de toutes les procédures et fonctions précédentes
 * \return int Code de retour
 */
 int main()
